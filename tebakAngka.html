@@ -1,0 +1,52 @@
+<html>
+	<head>
+	
+	</head>
+	<body>
+		<script>
+			var nyawa = 3;
+			
+			let angka = Math.floor(Math.random() * 9) ;
+			 
+			 var lagi = true;
+			 var tebak = prompt("Ayo tebak angka (1-10) berapa yang keluar : ");
+			 
+			 while (lagi == true ){
+			 if (tebak == angka){
+			  alert("Hebat Kamu MENANG....");
+			  lagi = false;
+			  //lagi = confirm("Mau main lagi ?");
+			  document.write("<h1> <blink> Kamu BENAR angkanya adalah :  "+angka+"<blink></h1>");
+			 } else if ( tebak > angka){
+			 	if ( nyawa >= 1){
+			 //	nyawa = nyawa - 1;
+			 	alert("Kamu SALAH, angkanya lebih kecil dari "+tebak);
+			 	//alert("Kesempatan Kamu tinggal :  "+nyawa);
+		 		lagi = confirm("COBA LAGI ? Kesempatan Kamu tinggal = "+nyawa+" kali");
+		 		tebak = prompt("Masukkan lagi angkanya :");
+			 	nyawa = nyawa - 1;
+			 	} else{
+			 		alert("Kesempatanmu habis -_-");
+			 		lagi = false;
+			 	}
+			 }else if( tebak <= angka){
+			   if ( nyawa > 1 ){
+			   //nyawa = nyawa - 1;
+			   alert("SALAH... Angkanya lebih besar dari "+tebak);
+			 //  alert("Kesempatan Kamu tinggal : "+nyawa);
+			 	 lagi = confirm("COBA LAGI..? Kesempatan Kamu tinggal = "+nyawa+" kali")
+			 	 tebak = prompt("Masukkan lagi angkanya :");
+			 	 nyawa = nyawa - 1;
+			 	} else{
+			 		alert("Kesempatanmu habis -_-");
+			 		lagi = false;
+			 	}
+			 } else {  
+			 	 alert("Salah input");
+			 }
+			}
+		</script>
+	</body>
+
+</html>
+

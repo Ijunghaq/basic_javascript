@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<script>
+		var lagi = true;//confirm("KAMU MAU MAIN LAGI ?");
+		while( lagi == true) {
+			var player = prompt("Pilihlah Diantara SEMUT / GAJAH / MANUSIA : ☆☆☆ ");//
+			let cond = Math.floor(Math.random() * 3);
+			var com = "";
+		//	alert(cond);
+		
+
+			if(cond == 0){
+				com ="gajah";
+				alert("Kamu Akan Melawan : "+com);
+			} else if (cond == 1){
+				com = "manusia";
+				alert("Kamu Akan Melawan : "+com);
+			} else{
+				com = "semut";
+				alert("Kamu Akan Melawan : "+com);
+			}
+			
+			if(com == player){
+				alert("Hasil SERI..!!!");
+			}
+			else if(com == "gajah" && player == "semut"){
+			 alert("HEBAT, Kamu MENAAaNG.....!");
+			} else if( com == "gajah" && player == "manusia"){
+				alert("Kamu Kalah -_-! @_@");
+			} else if( com =="manusia" && player =="semut"){
+				alert("Kamu Kalah -_-! @_@");
+			}else if( com == "manusia" && player == "gajah"){
+				alert("Horeee... Kamu MENANG..!");
+			}else if ( com == "semut" && player == "gajah"){
+				alert("Yaah.. Kamu Kalah -_-! @_@");
+			}else if( com =="semut" && player == "manusia"){
+			 	alert("Yuuhuuu.. Kamu MENANG.. ^o^ ");
+			}
+			else{
+			 alert("Inputan Salah, Coba Lagi...");
+			}
+			lagi = confirm("Seru Kaan?! Mau Main Lagi ?");
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

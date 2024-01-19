@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> coba bikin objek</title>
+
+<script>
+	// cara membuat object
+	// 1. Object Literal
+	mhs1={
+	nama : "muhammad",
+	nim : "06 41010 0149",
+	email: "ijung@gmail.com",
+	jurusan:"Sistem Informasi",
+	}
+console.log(mhs1.email);
+
+	// 2. function declaration
+	function buatObjectMhs(nama,nim,email,jurusan){
+		var mhs ={};
+		mhs.nama=nama;
+		mhs.nim=nim;
+		mhs.email=email;
+		mhs.jurusan=jurusan;
+		return mhs;
+	}
+	var mhs2 = buatObjectMhs("aziz","06410100149", "aziz@mail.com","Sistem Informasi");
+	alert(mhs2.nim);
+	
+	
+	// 3. constructor function
+	function ObjectMaba(nama,nim,email,jurusan){
+	//	var mhs ={};
+		this.nama=nama;
+		this.nim=nim;
+		this.email=email;
+		this.jurusan=jurusan;
+	//	return mhs;
+	}
+	var mhs3 = new ObjectMaba("azizah","06420100149", "azizah@mail.com","Sistem Komputer");
+	alert(mhs3.nama);
+	
+
+</script>
+</head>
+<body>
+ <p><i>OBJECT</i> PADA <em>JAVASCRIPT</em> ITU SEPERTI <u>ASSOCIATIVE ARRAY</u> PADA <b>PHP</b></p>
+ <p> Variabel di dalam object disebut <b>properti</b>, sedangkan function di dalam object disebut dengan <strong>method</strong></p>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script type="text/javascript">
+		function Angkot(sopir,trayek,penumpang,kas){
+		
+		this.sopir=sopir;
+		this.trayek=trayek;
+		this.penumpang=penumpang;
+		this.kas=kas;
+		 
+		 this.penumpangNaik= function(namaPenumpang){
+	//	 namaPenumpang = prompt("nama penumpang : ");
+			 this.penumpang.push(namaPenumpang) ;
+			 return this.penumpang; 
+		 }
+		 
+		 this.penumpangTurun= function(namaPenumpang,bayar)
+		 {
+			 if(namaPenumpang ===0){
+			 alert("Angkot masih kosong");
+			 return false;
+			 }
+			 for(var i;i<this.penumpang.length;i++){
+			  if(this.penumpang[i]==namaPenumpang){
+			   this.penumpang[i]=undefined; 
+			   this.kas+=3000;
+			   return this.penumpang; 
+			  }
+			  
+			 }
+			 
+		 }
+		}
+		var angkot1=new Angkot("joko",["surabaya","mojokerto",
+		"jombang"],[],0);
+			alert(angkot1.sopir+" "+angkot1.trayek.join(" - ")+" "+angkot1.penumpang+" Rp."+angkot1.kas);
+		var angkot2=new Angkot("widodo",["surabaya","malang",
+		"blitar"],[],0);
+		console.log(angkot2.sopir+" "+angkot2.trayek+" "+angkot2.penumpang+" Rp."+angkot2.kas);
+		
+		
+		
+//	alert(Angkot.penumpangNaik);
+</script>
+</head>
+<body>
+
+</body>
+</html>
